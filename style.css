@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body {
+     font-size: 16px;
+     font-family: "Poppins", sans-serif;
+     background-color: #fff;
+}
+
+header {
+     background-color: #333;
+     height: 80px;
+}
+
+.env-container {
+     display: flex;
+     min-height: 30vh;
+     padding: 0 5rem;
+     margin: 3rem 0;
+     gap: 2.5rem;
+}
+
+.env-container .env-showcase {
+     width: 60%;
+}
+
+.env-container .env-showcase h2,
+.districts-container h2 {
+     font-size: 1.7rem;
+     font-weight: 600;
+     position: relative;
+     margin-bottom: 1.7rem;
+}
+
+.env-container .env-showcase h2::before,
+.districts-container h2::before {
+     content: "";
+     position: absolute;
+     bottom: -3px;
+     left: 0;
+     width: 4.5rem;
+     height: 5px;
+     background-color: #e0aa5d;
+}
+
+.env-container .env-showcase p {
+     font-size: 0.95rem;
+     font-weight: 500;
+     line-height: 1.75rem;
+}
+
+img.img-showcase {
+     width: 40%;
+     object-fit: contain;
+     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0 100%);
+}
+
+.districts-container {
+     padding: 0 5rem;
+     margin-bottom: 3rem;
+}
+
+.chennai > h3 {
+     font-size: 1.35rem;
+     margin-bottom: 1.15rem;
+}
+
+.chennai-activists {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     align-items: center;
+     gap: 1.25rem;
+}
+
+.chennai-activists .card {
+     border: 2px solid #ccc;
+     border-radius: 6px;
+     padding: 1rem;
+     display: flex;
+     gap: 1rem;
+}
+
+.chennai-activists .card img {
+     width: 200px;
+     object-fit: cover;
+     border-radius: 4px;
+}
+
+.card .details section {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.details article {
+     display: inline-flex;
+     align-items: center;
+     flex-direction: column;
+     margin-bottom: 1rem;
+}
+
+article p {
+     font-weight: 600;
+     font-size: 0.975rem;
+}
+
+article span {
+     font-size: 0.75rem;
+     font-weight: 500;
+     color: #e0aa5d;
+}
+
+.details > p {
+     font-size: 0.85rem;
+     font-weight: 00;
+}
+
+.timeline {
+     max-width: 1080px;
+     margin: 50px auto;
+     padding: 0 20px;
+     position: relative;
+}
+
+.timeline .center-line {
+     position: absolute;
+     width: 5px;
+     height: 100%;
+     background-color: #e0aa5d;
+     left: 50%;
+     top: 20px;
+     transform: translateX(-50%);
+     border-radius: 5px;
+}
+
+.activities {
+     display: flex;
+     margin-bottom: 15px;
+}
+
+.activities-1 {
+     justify-content: flex-start;
+}
+
+.activities-2 {
+     justify-content: flex-end;
+}
+
+.activities section {
+     width: calc(50% - 50px);
+     background-color: #e0aa5d;
+     border-radius: 5px;
+     padding: 15px;
+     position: relative;
+     z-index: 2;
+}
+
+.logo {
+     font-size: 0.75rem;
+     position: absolute;
+     width: 40px;
+     height: 40px;
+     background-color: #fff;
+     text-align: center;
+     line-height: 40px;
+     border-radius: 50%;
+     font-weight: 700;
+     box-shadow: 0 0 0 4px #e0aa5d, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+          0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.activities-1 .logo {
+     right: -70px;
+     top: 10px;
+}
+
+.activities-2 .logo {
+     top: 10px;
+     left: -70px;
+}
+
+section::before {
+     content: "";
+     position: absolute;
+     width: 15px;
+     height: 15px;
+     background-color: #e0aa5d;
+     transform: rotate(45deg);
+     z-index: -1;
+     top: 20px;
+}
+
+.activities:nth-child(2n) section::before {
+     right: -7px;
+}
+.activities:nth-child(2n + 1) section::before {
+     left: -7px;
+}
+
+.activities section h3 {
+     font-size: 1.1rem;
+     margin-bottom: 0.75rem;
+     color: #fff;
+}
+
+.activities section p {
+     font-size: 0.875rem;
+     color: #fff;
+}
+
+@media only screen and (max-width: 1200px) {
+     .env-container {
+          align-items: flex-start;
+     }
+
+     .chennai-activists .card {
+          flex-direction: column;
+     }
+
+     .chennai-activists .card img {
+          width: 100%;
+     }
+}
+
+@media only screen and (max-width: 968px) {
+     .env-container .env-showcase {
+          width: 100%;
+     }
+     img.img-showcase {
+          display: none;
+     }
+
+     .chennai-activists {
+          grid-template-columns: 1fr;
+     }
+
+     .chennai-activists .card {
+          flex-direction: row;
+     }
+
+     .chennai-activists .card img {
+          width: 200px;
+     }
+}
+
+@media only screen and (max-width: 700px) {
+     .chennai-activists .card {
+          flex-direction: column;
+     }
+
+     .chennai-activists .card img {
+          width: 100%;
+     }
+
+     .timeline .center-line {
+          left: 40px;
+     }
+
+     .timeline .activities {
+          margin: 30px 0 3px 60px;
+     }
+
+     .timeline .activities section {
+          width: 100%;
+     }
+
+     .timeline .activities section::before {
+          left: -7px;
+     }
+
+     .activities section .logo {
+          left: -60px;
+     }
+
+     .env-container,
+     .districts-container {
+          padding: 0 3rem;
+     }
+}
+
+@media only screen and (max-width: 500px) {
+     .env-container,
+     .districts-container {
+          padding: 0 1.45rem;
+     }
+}
